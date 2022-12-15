@@ -9,6 +9,12 @@
     --color-success: hsl(120, 95%, 65% );
     --color-danger: hsl(0, 95%, 65% );
     --color-black: hsl(252, 30%, 10% );
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding:  1rem;
 }
 
 *,
@@ -27,4 +33,76 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-dark);
     background: var(--color-light);
+    overflow-x: hidden;
+}
+
+/* GENERAL STYLE*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.profile-photo{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300 ease;
+    font-size: 0.9rem;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+.text-bold{
+    font-weight: 500;
+}
+.text-muted{
+    color: var(--color-gray);
+}
+
+
+/* =====================NAVBAR=================== */
+nav{
+    width: 100%;
+    background: var(--color-light);
+    padding: 0.7rem, 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .search-bar{
+    background: var(--color-secondary);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+nav .search-bar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
